@@ -27,14 +27,15 @@ button:hover{
 
 .routines{
     margin: 10px;
-    height: 300px   ;
+    height: 500px;
     background-color: rgb(255, 162, 0);
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .routines button{
     background-color: rgb(19, 8, 228);
     height:100px;
-    width: 7%;
     margin: 3.5%;
     border-radius: 50px;
     color:orange;
