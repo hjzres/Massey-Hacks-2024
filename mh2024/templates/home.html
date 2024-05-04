@@ -1,37 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitness Site</title>
-    <!--Remove /mh2024 for flask-->
-    <link rel="stylesheet" href="/mh2024/static/styles/style.css">
-    <link rel="stylesheet" href="/mh2024/static/styles/home.css">
-</head>
-<body>
-    
-    <div>
-        <div class="topDiv">
-            <h4 class="inline" id="siteTitle">Fitness App</h4>
-            <p id="siteSlogan">your fitness planner.</p>
-        </div>
+{% extends "base.html" %}
 
-        <div class="topDiv" id="buttonDiv">
-            <button class="loginButton inline">Login</button>
-            <button class="loginButton inline">Sign Up</button>
-        </div>
+{% block content %}
+<div class="homebar">
+    <p>hi</p>
+</div>
+{% endblock %}
+
+<!--
+<div>
+    <div class="topDiv">
+        <h4 class="inline" id="siteTitle">Fitness App</h4>
+        <p id="siteSlogan">your fitness planner.</p>
     </div>
 
-    <div id="introDivID">
-        <div class="introDiv" id="introTextDivID">
-            <h4 class="introText">Start Organizing Your Workouts Today!</h4>
-            <p class="introText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quod debitis officia aperiam expedita. Ratione obcaecati enim quae architecto dolorum, nam ab quasi, itaque pariatur labore iusto! Odit, dolore omnis.</p>
-        </div>
-
-        <div class="introDiv" id="introImageDivID">
-            <img class="introImage" src="/mh2024/static/images/dreamybull.jpg" alt="" width=50% height=50%>
-        </div>
+    <div class="topDiv" id="buttonDiv">
+        <button class="loginButton inline">Login</button>
+        <button class="loginButton inline">Sign Up</button>
     </div>
-    
-</body>
-</html>
+</div>
+
+<div id="introDivID">
+    <div class="introDiv" id="introTextDivID">
+        <h4 class="introText">Start Organizing Your Workouts Today!</h4>
+        <p class="introText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quod debitis officia aperiam expedita. Ratione obcaecati enim quae architecto dolorum, nam ab quasi, itaque pariatur labore iusto! Odit, dolore omnis.</p>
+    </div>
+
+    <div class="introDiv" id="introImageDivID">
+        <img class="introImage" src="/mh2024/static/images/dreamybull.jpg" alt="" width=50% height=50%>
+    </div>
+</div>
+-->
