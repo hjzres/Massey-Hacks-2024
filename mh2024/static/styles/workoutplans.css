@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
 
 :root{
-
+    
 }
 
 .workout-title{
@@ -17,6 +17,7 @@
 
 button:hover{
     cursor:pointer;
+    transform: scale(1.05) rotate(-1deg);
 }
 
 .search{
@@ -27,11 +28,11 @@ button:hover{
 .routines{
     margin: 10px;
     height: 300px   ;
-    background-color: orange;
+    background-color: rgb(255, 162, 0);
 }
 
 .routines button{
-    background-color: blue;
+    background-color: rgb(19, 8, 228);
     height:100px;
     width: 7%;
     margin: 3.5%;
@@ -39,4 +40,13 @@ button:hover{
     color:orange;
     font-size: 250%;
     font-family: "Freeman", Arial, Helvetica, sans-serif;
+}
+
+.routines button:hover{
+    background-color: rgb(0, 89, 255);
+}
+
+.routines button:active{
+    color:rgb(127, 95, 37);
+    background-color: rgb(17, 17, 217);
 }
