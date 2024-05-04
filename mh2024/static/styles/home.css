@@ -1,0 +1,35 @@
+
+
+
+
+
+
+
+#introDivID
+{
+    background-color: rgb(255,204,102);
+    padding-top: 15px;
+    padding-bottom: 275px;
+}
+
+.introDiv
+{
+    width: 50%;
+    float: left;
+    font-size: 25px;
+    letter-spacing: .5px;
+}
+
+.introText
+{
+    margin: 10px;
+    padding: 5px;
+    
+}
+
+.introImage
+{
+    display: block;
+    margin: auto;
+    width: 75%;
+}
