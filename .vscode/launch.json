@@ -10,7 +10,8 @@
             "request": "launch",
             "module": "flask",
             "env": {
-                "FLASK_DEBUG": "1"
+                "FLASK_DEBUG": "1",
+                "SECRET_KEY": "mh2024"
             },
             "args": [
                 "run",
