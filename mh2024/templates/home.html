@@ -1,29 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitness Site</title>
-    <!--Remove /mh2024 for flask-->
-    <link rel="stylesheet" href="/mh2024/static/styles/style.css">
-</head>
-<body>
-    <div>
+{% extends "base.html" %}
+
+{% block content %}
+<div class="homebar">
+    <p>hi</p>
+</div>
+{% endblock %}
+
+<!--
+<div>
+    <div class="topDiv">
         <h4 class="inline" id="siteTitle">Fitness App</h4>
-        <p class="inline" id="siteSlogan">your fitness planner.</p>
-        <button class="loginButton">Login</button>
-        <button class="loginButton">Sign Up</button>
+        <p id="siteSlogan">your fitness planner.</p>
     </div>
 
-    <div id="introDivID">
-        <div>
-            <h4>Start Organizing Your Workouts Today!</h4>
-            <p class="inline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quod debitis officia aperiam expedita. Ratione obcaecati enim quae architecto dolorum, nam ab quasi, itaque pariatur labore iusto! Odit, dolore omnis.</p>
-        </div>
-
-        <div>
-            <img src="/mh2024/static/images/dreamybull.jpg" alt="" width=50% height=50%>
-        </div>
+    <div class="topDiv" id="buttonDiv">
+        <button class="loginButton inline">Login</button>
+        <button class="loginButton inline">Sign Up</button>
     </div>
-</body>
-</html>
+</div>
+
+<div id="introDivID">
+    <div class="introDiv" id="introTextDivID">
+        <h4 class="introText">Start Organizing Your Workouts Today!</h4>
+        <p class="introText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quod debitis officia aperiam expedita. Ratione obcaecati enim quae architecto dolorum, nam ab quasi, itaque pariatur labore iusto! Odit, dolore omnis.</p>
+    </div>
+
+    <div class="introDiv" id="introImageDivID">
+        <img class="introImage" src="/mh2024/static/images/dreamybull.jpg" alt="" width=50% height=50%>
+    </div>
+</div>
+-->
