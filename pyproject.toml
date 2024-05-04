@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "massey-hacks-2024"
+name = "mh2024"
 version = "0.1.0"
 description = ""
 authors = ["Andrei <142443853+hjzres@users.noreply.github.com>"]
