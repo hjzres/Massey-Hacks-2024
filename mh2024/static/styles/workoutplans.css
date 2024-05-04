@@ -1,37 +1,22 @@
 :root{
-    --tabSize: 50px;
+    
 }
 
-.tabs{
-    display: flex;
+.workout-title{
+    display:flex;
     justify-content: center;
     align-items: center;
 }
 
-.tabs button{
-    border-style: inset;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-color: rgb(255, 166, 0);
-    background:none;
-    font-size: var(--tabSize);
+.inline{
+    display:inline-block;
 }
 
 button:hover{
     cursor:pointer;
 }
 
-.vertical{
-    height: var(--tabSize);
-    width: calc(var(--tabSize) / 25);
-    background-color:rgb(235, 166, 38);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5%;
-}
-
-.inline{
-    display:inline-block;
+.search{
+    border:none;
+    background:none;
 }
