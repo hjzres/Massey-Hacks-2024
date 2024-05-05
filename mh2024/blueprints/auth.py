@@ -1,7 +1,7 @@
 from flask import Blueprint, flash, redirect, render_template, request
 from flask_login import login_required, login_user, logout_user
 
-from mh2024 import crud
+from mh2024 import crud, auth
 
 bp = Blueprint("auth", __name__, url_prefix="/auth")
 
@@ -19,7 +19,7 @@ def user_login():
             flash("User does not exist!")
             return redirect("/auth/login")
 
-        if password != u.password_hash:
+        if not auth.authenticate_user(u, password):
             flash("Password incorrect!")
             return redirect("/auth/login")
 
