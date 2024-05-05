@@ -1,4 +1,19 @@
-{% extends "base.html" %}
-{% block content %}
-    
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/base.css">
+    <link rel="stylesheet" href="/static/styles/workout-search.css">
+    <title>Search</title>
+</head>
+<body>
+    <h1 id="main">Search</h1>
+    <form>
+        <input type="text" name="name" id="name" class="name">
+        <button id="search" class="search">Search</button>
+    </form>
+
+    <script src="/static/workout-search.js"></script>
+</body>
+</html>
