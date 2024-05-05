@@ -21,6 +21,9 @@ input
     margin-bottom: 1.5rem;
 }
 
+input[type=checkbox] {
+    width: initial;
+}
 
 input[type=submit] {
     margin-bottom: 0;
