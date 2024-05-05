@@ -18,6 +18,10 @@ def add_workout(user:str, day:str, workout:str, sets:list):
     if not user in cache: return
     cache[user][day][workout]=sets
 
+def get_day_info(user:str, day:str):
+    cache:dict = load_file()
+    return cache[user][day]
+
 
 def load_file():
     with open(f"./data/cache.json", "r") as f:

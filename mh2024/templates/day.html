@@ -9,10 +9,16 @@
 <body>
     <h1> {{ day.title() }} </h1>
     <div class="workouts">
-        <button>
-            <p>Bench Press</p>
-            <p class="sets"><span>8x</span> <span>10x</span> <span>12x</span></p>
-        </button>
+        {% for workout in workouts %}
+            <button>
+                <p>{{ workout }}</p>
+                <p class="sets">
+                {% for i in range(workouts[workout]|length) %}
+                    <span>{{ workouts[workout][i] }}x </span>
+                {% endfor %}
+                </p>
+            </button>
+        {% endfor %}
         <button class="add-workout">+</button>
     </div>
 </body>

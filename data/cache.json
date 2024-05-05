@@ -1,13 +1,16 @@
 {
     "Andrei":
     {
-        "Monday":
+        "monday":
         {
-            "BenchPress":[8, 10, 12]
+            "BenchPress":[8, 10, 12],
+            "Skull Crushers":[6, 8, 10, 12, 14]
         },
-        "Tuesday":
-        {
-
-        }
+        "tuesday":{},
+        "wednesday":{},
+        "thursday":{},
+        "friday":{},
+        "saturday":{},
+        "sunday":{}
     }
 }
