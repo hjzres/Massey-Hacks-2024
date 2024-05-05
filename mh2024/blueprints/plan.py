@@ -23,3 +23,8 @@ def day(day, username):
 @bp.route("/workout/search")
 def workout_search():
     return(render_template("workout-search.html"))
+
+@bp.route("/workout/search/<username>")
+def workout_searched(username):
+    user = crud.get_user_by_username(username)
+    return(render_template("workoutplans.html", user=user))
