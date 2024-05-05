@@ -7,30 +7,30 @@
     <link rel="stylesheet" href="/static/styles/workoutplans.css">
 </head>
 <body>
-    <h1 class="workout-title">Workout</h1>
+    <h1 class="workout-title">{{ user.username }}</h1>
     <form class="inline" action="/plan/workout/search">
         <button class="search">&#128270;</button>
     </form>
     <div class="routines">
-        <form action="/plan/workout/monday/{{ user }}">
+        <form action="/plan/workout/monday/{{ user.username }}">
             <button class="monday">M</button>
         </form>
-        <form action="/plan/workout/tuesday/{{ user }}">
+        <form action="/plan/workout/tuesday/{{ user.username }}">
             <button class="tuesday">T</button>
         </form>
-        <form action="/plan/workout/wednesday/{{ user }}">
+        <form action="/plan/workout/wednesday/{{ user.username }}">
             <button class="wednesday">W</button>
         </form>
-        <form action="/plan/workout/thursday/{{ user }}">
+        <form action="/plan/workout/thursday/{{ user.username }}">
             <button class="thursday">T</button>
         </form>
-        <form action="/plan/workout/friday/{{ user }}">
+        <form action="/plan/workout/friday/{{ user.username }}">
             <button class="friday">F</button>
         </form>
-        <form action="/plan/workout/saturday/{{ user }}">
+        <form action="/plan/workout/saturday/{{ user.username }}">
             <button class="saturday">S</button>
         </form>
-        <form action="/plan/workout/sunday/{{ user }}">
+        <form action="/plan/workout/sunday/{{ user.username }}">
             <button class="sunday">S</button>
         </form>
     </div>

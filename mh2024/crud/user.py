@@ -7,6 +7,7 @@ from mh2024 import auth
 db = {
     "1": {"username": "noah", "password_hash": "password"},
     "2": {"username": "bell", "password_hash": "password2"},
+    "3": {"username": "Andrei", "password_hash": "password3"},
 }
 
 
