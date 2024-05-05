@@ -9,6 +9,9 @@
 </head>
 <body>
     <h1> {{ day.title() }} </h1>
+    <form action="/plan/workout/{{ user.username }}">
+        <button id="back-button">Back</button>
+    </form>
     <div class="workouts">
         {% for workout in workouts %}
             <button>
