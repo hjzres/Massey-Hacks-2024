@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
 
-body
-{
-    margin: 0px;
-    background-color: rgb(255,238,204);
-}
-
 h1{
-    font-family: "Freeman", Arial, Helvetica, sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 400%;
     display:flex;
     justify-content: center;
@@ -15,8 +9,16 @@ h1{
 }
 
 .workouts{
-    background-color: blue;
+    background-color: #555566;
     margin:10px;
+    box-sizing: border-box;
+    padding: 2rem;
+    border-radius: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .workouts button{

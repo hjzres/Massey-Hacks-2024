@@ -3,13 +3,13 @@ import json
 def add_user(user:str):
     cache:dict = load_file()
     cache[user] = {
-        "Monday":{},
-        "Tuesday":{},
-        "Wednesday":{},
-        "Thursday":{},
-        "Friday":{},
-        "Saturday":{},
-        "Sunday":{}
+        "monday":{},
+        "tuesday":{},
+        "wednesday":{},
+        "thursday":{},
+        "friday":{},
+        "saturday":{},
+        "sunday":{}
     }
     post_file(cache)
 

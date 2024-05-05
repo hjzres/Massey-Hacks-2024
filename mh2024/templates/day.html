@@ -1,38 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/styles/day.css">
-    <link rel="stylesheet" href="/static/styles/base.css">
-    <title>{{ day.title() }}</title>
-</head>
-<body>
-    <h1> {{ day.title() }} </h1>
-    <form action="/plan/workout/{{ user.username }}">
-        <button id="back-button">Back</button>
-    </form>
-    <form method="post">
-        <input type="hidden" name="_method" value="DELETE">
-        <button class="reset" id="reset">Reset</button>
-    </form>
-    <div class="workouts">
-        {% for workout in workouts %}
-            <button>
-                <p>{{ workout }}</p>
-                <p class="sets">
-                {% for i in range(workouts[workout]|length) %}
-                    <span>{{ workouts[workout][i] }}x </span>
-                {% endfor %}
-                </p>
-            </button>
-        {% endfor %}
-        <button class="add-workout">+</button>
-    </div>
-    <div id="myModal" class="modal">
+{% extends "base.html" %}
+{% block dir %}column{% endblock %}
+{% block content %}
+<h1> {{ day.title() }} </h1>
+<form action="/plan/workout/{{ user.username }}">
+    <button id="back-button">Back</button>
+</form>
+<form method="post">
+    <input type="hidden" name="_method" value="DELETE">
+    <button class="reset" id="reset">Reset</button>
+</form>
+<div class="workouts">
+    {% for workout in workouts %}
+        <button class="glow-button">
+            <p>{{ workout }}</p>
+            <p class="sets">
+            {% for i in range(workouts[workout]|length) %}
+                <span>{{ workouts[workout][i] }}x </span>
+            {% endfor %}
+            </p>
+        </button>
+    {% endfor %}
+    <button class="add-workout glow-button white-button">+</button>
+</div>
 
-        <!-- Modal content -->
-        <form method="post">
+{% endblock %}
+
+{% block modal %}
+    <!-- Modal content -->
+    <div id="myModal" class="modal">
+        <form method="post">   
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <p style="color:black;">What workout would you like to add?</p>
@@ -44,8 +40,5 @@
                 <button class="add">Add</button>
             </div>
         </form>
-      </div>
-
-      <script src="/static/day.js"></script>
-</body>
-</html>
+    </div>  
+{% endblock %}

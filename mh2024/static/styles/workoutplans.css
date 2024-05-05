@@ -4,12 +4,6 @@
     
 }
 
-body
-{
-    margin: 0px;
-    background-color: rgb(255,238,204);
-}
-
 .workout-title{
     font-family: "Freeman", Arial, Helvetica, sans-serif;
     display:flex;
@@ -41,6 +35,7 @@ button:hover{
 }
 
 .routines{
+    width: 100%;
     margin: 10px;
     height: 125x;
     background-color: rgb(255, 162, 0);

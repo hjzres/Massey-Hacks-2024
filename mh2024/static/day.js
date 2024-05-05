@@ -5,6 +5,7 @@ var btn = document.getElementsByClassName("add-workout")[0];
 var span = document.getElementsByClassName("close")[0];
 
 btn.onclick = function() {
+  console.log("test");
   modal.style.display = "block";
 }
 

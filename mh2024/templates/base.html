@@ -15,6 +15,9 @@
         <link rel="stylesheet" href="/static/styles/navbar.css" />
         <link rel="stylesheet" href="/static/styles/forms.css" />
         <link rel="stylesheet" href="/static/styles/button.css">
+        <link rel="stylesheet" href="/static/styles/workoutplans.css">
+        <link rel="stylesheet" href="/static/styles/day.css">
+        <script src="/static/day.js" defer></script>
     </head>
 
     <body>
@@ -48,6 +51,7 @@
 
         {% endif %} {% endwith %}
 
-        <main id="main">{% block content %} {% endblock %}</main>
+        <main id="main" style="flex-direction: {% block dir %}row{% endblock %};">{% block content %} {% endblock %}</main>
+        {% block modal %} {% endblock %}
     </body>
 </html>

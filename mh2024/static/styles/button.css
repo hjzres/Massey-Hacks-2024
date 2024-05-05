@@ -39,3 +39,8 @@
     --glow-h: #d94;
     --glow-p: #f54;
 }
+
+button {
+    border: none;
+    outline: none;
+}

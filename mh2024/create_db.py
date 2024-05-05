@@ -1,9 +1,12 @@
-from mh2024 import crud
+import sqlite3
 
+DATABASE = 'db.sqlite3'
 
 with open("create_tables.sql", 'r') as sql_file:
     script = sql_file.read()
 
-cursor = crud.get_db().cursor()
+conn = sqlite3.connect(DATABASE)
+
+cursor = conn.cursor()
 cursor.executescript(script)
-crud.get_db().commit()
+conn.commit()

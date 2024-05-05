@@ -5,3 +5,5 @@ from .user import (
     get_user_by_uuid,
     update_user_password_hash,
 )
+
+from .database import get_db

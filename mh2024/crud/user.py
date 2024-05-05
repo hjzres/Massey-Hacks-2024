@@ -2,7 +2,7 @@ from uuid import uuid4
 
 from flask_login import UserMixin
 
-from mh2024 import auth
+from mh2024 import auth, data
 
 import sqlite3
 
@@ -31,6 +31,7 @@ def create_user(username: str, password: str, email: str) -> User:
         INSERT INTO Users (UserId, Username, PasswordHash, Email) VALUES
             (?, ?, ?, ?)
     """, row_data)
+    data.add_user(username)
     get_db().commit()
     return User(uuid, username, password_hash, email)
 

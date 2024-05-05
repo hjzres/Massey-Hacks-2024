@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>workout plans</title>
-    <link rel="stylesheet" href="/static/styles/workoutplans.css">
-    <link rel="stylesheet" href="/static/styles/base.css">
-</head>
-<body>
+{% extends "base.html" %}
+{% block dir %}column{% endblock %}
+{% block content %}
     <h1 class="workout-title">{{ user.username }}</h1>
     <form class="inline" action="/plan/workout/search">
         <button class="search">&#128270;</button>
@@ -35,5 +28,4 @@
             <button class="sunday">S</button>
         </form>
     </div>
-</body>
-</html>
+{% endblock %}
