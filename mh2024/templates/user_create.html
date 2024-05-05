@@ -1,32 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
-    <ul>
-        {% if current_user.is_authenticated %}
-            <p>Hi {{ current_user.username }}!</p>
-            <li><a href="/auth/logout">Logout</a></li>
-        {% else %}
-            <li><a href="/auth/login">Login</a></li>
-            <li><a href="/user/create">Register</a></li>
-        {% endif %}
-    </ul>
+<form id="input-form" action="/user/create" method="post">
+  <label class="label" for="username">Username:</label>
+  <input class="input" type="text" name="username" id="username" />
 
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            <ul class=flashes>
-                {% for message in messages %}
-                    <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    {% endwith %}
+  <label class="label" for="password">Password:</label>
+  <input class="input" type="password" name="password" id="password" />
 
-    <form action="/user/create" method="post">
-        <label for="username">Username:</label><br>
-        <input type="text" name="username" id="username"><br>
+  <input class="glow-button input" type="submit" value="Register" />
+</form>
 
-        <label for="password">Password:</label><br>
-        <input type="password" name="password" id="password"><br>
-
-        <input type="submit" value="Register">
-    </form>
+<img
+  class="background_image"
+  src="/static/images/build_guy.png"
+  alt="Buff black dude"
+/>
 {% endblock %}

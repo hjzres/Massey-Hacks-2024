@@ -1,6 +1,6 @@
 from os import environ
 
-from flask import Flask
+from flask import Flask, render_template
 
 from .auth import login_manager
 
@@ -14,6 +14,10 @@ if not (data_folder / "cache.json").is_file():
 
 def create_app():
     app = Flask(__name__)
+    @app.route("/")
+    def home():
+        return render_template("home.html")
+
     app.config["SECRET_KEY"] = environ["SECRET_KEY"]
 
     login_manager.init_app(app)

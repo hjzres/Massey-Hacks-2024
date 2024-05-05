@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+
+:root
+{
+    --home_info_height: 500px;
+}
+
+#home_info
+{
+    width: 100%;
+    height: var(--home_info_height);
+}
+
+#home_text_info_div
+{
+    width: 50%;
+    height: var(--home_info_height);
+    font-size: 30px;
+    font-family: "Freeman", Arial;
+}
+
+#home_image_info_div
+{
+    width: 50%;
+    height: var(--home_info_height);
+}
+
+.home_info_div
+{
+    display: block;
+    margin: auto;
+    float: left;
+}
+
+#sign_up_prompt
+{
+    font-weight: bold;
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+}
+
+.image
+{
+    width: 90%;
+    height: auto;
+    transform: translateY(calc((var(--homebar_height) / 2) + 30px));
+    display: block;
+    margin: auto;
+    border-radius: 25px;
+}
