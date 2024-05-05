@@ -24,7 +24,7 @@
             </nav>
             <nav>
                 {% if current_user.is_authenticated %}
-                <a class="glow-button" href="/user/{{current_user.username}}">
+                <a class="glow-button white-button" href="/user/{{current_user.username}}">
                     {{current_user.username}}
                 </a>
                 <a class="glow-button" href="/auth/logout">Logout</a>

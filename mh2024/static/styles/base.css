@@ -8,7 +8,7 @@ body
     font-family: "Inter", sans-serif;
     color: #EEEEEE;
 
-    margin: 2rem 4rem;
+    margin: 2rem 4rem 0 4rem;
 }
 
 #main {
@@ -16,4 +16,9 @@ body
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }

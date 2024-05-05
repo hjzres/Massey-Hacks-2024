@@ -13,14 +13,29 @@
     transition: box-shadow 0.15s, transform 0.15s;
 
     display: inline-block;
+
+    --light-h: #eee;
+    --light-p: #eee;
+    --glow-h: #d94;
+    --glow-p: #f54;
 }
 
 .glow-button:hover {
-    box-shadow: 0 4px 8px #d94, 0 -3px 0 #eee inset;
+    box-shadow: 0 4px 8px var(--glow-h), 0 -3px 0 var(--light-h) inset;
     transform: translateY(-0.1rem);
 }
 
 .glow-button:active {
-    box-shadow: 0 4px 8px #f54, 0 -3px 0 #eee inset;
+    box-shadow: 0 4px 8px var(--glow-p), 0 -3px 0 var(--light-p) inset;
     transform: translateY(0.1px);
+}
+
+.white-button {
+    background-color: #eee;
+    color: #111;
+
+    --light-h: #d94;
+    --light-p: #f54;
+    --glow-h: #d94;
+    --glow-p: #f54;
 }
