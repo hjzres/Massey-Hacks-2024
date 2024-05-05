@@ -35,7 +35,7 @@
 #sign_up_prompt
 {
     font-weight: bold;
-    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+    font-size: 2rem;
 }
 
 .image
