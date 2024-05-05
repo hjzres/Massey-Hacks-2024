@@ -17,6 +17,7 @@ def add_workout(user:str, day:str, workout:str, sets:list):
     cache:dict = load_file()
     if not user in cache: return
     cache[user][day][workout]=sets
+    post_file(cache)
 
 def get_day_info(user:str, day:str):
     cache:dict = load_file()
