@@ -4,25 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>workout plans</title>
-    <link rel="stylesheet" href="/static/styles/style.css">
     <link rel="stylesheet" href="/static/styles/workoutplans.css">
 </head>
 <body>
     <h1 class="workout-title">Workout</h1>
-    <form action="/plan/workout/create" class="inline">
-        <button class="create">Create</button>
-    </form>
-    <form class="inline" action="/workout/search">
+    <form class="inline" action="/plan/workout/search">
         <button class="search">&#128270;</button>
     </form>
     <div class="routines">
-        <button class="monday">M</button>
-        <button class="tuesday">T</button>
-        <button class="wednesday">W</button>
-        <button class="thursday">T</button>
-        <button class="friday">F</button>
-        <button class="saturday">S</button>
-        <button class="sunday">S</button>
+        <form action="/plan/workout/monday/{{ user }}">
+            <button class="monday">M</button>
+        </form>
+        <form action="/plan/workout/tuesday/{{ user }}">
+            <button class="tuesday">T</button>
+        </form>
+        <form action="/plan/workout/wednesday/{{ user }}">
+            <button class="wednesday">W</button>
+        </form>
+        <form action="/plan/workout/thursday/{{ user }}">
+            <button class="thursday">T</button>
+        </form>
+        <form action="/plan/workout/friday/{{ user }}">
+            <button class="friday">F</button>
+        </form>
+        <form action="/plan/workout/saturday/{{ user }}">
+            <button class="saturday">S</button>
+        </form>
+        <form action="/plan/workout/sunday/{{ user }}">
+            <button class="sunday">S</button>
+        </form>
     </div>
 </body>
 </html>
