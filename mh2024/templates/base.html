@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/static/styles/base.css">
-    <link rel="stylesheet" href="/static/styles/homeinfo.css">
-    <link rel="stylesheet" href="/static/styles/homebar.css">
-    <link rel="stylesheet" href="/static/styles/useractivity.css">
-</head>
-<body>
-    <div id="homebar">
-        <div class="homebar_div" id="sidebar_div">
-            <button id="sidebar">Sidebar</button>
-        </div>
-    
-        <div class="homebar_div" id="title_div">
-            <h4 id="site_title">Fitness Website</h4>
-            <p id="site_slogan">your fitness planner.</p>
-        </div>
-    
-        <div class="homebar_div" id="login_buttons_div">
-            <a href="/auth/login">
-                <button class="login_buttons buttons">Login</button>
-            </a>
-            <a href="/user/create">
-                <button class="login_buttons buttons">Sign Up</button>
-            </a>
-        </div>
-    </div>
-    {% block content %}
-    {% endblock %}
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter&family=Raleway&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/static/styles/base.css" />
+        <link rel="stylesheet" href="/static/styles/homeinfo.css" />
+        <link rel="stylesheet" href="/static/styles/navbar.css" />
+        <link rel="stylesheet" href="/static/styles/forms.css" />
+        <link rel="stylesheet" href="/static/styles/button.css">
+    </head>
+
+    <body>
+        <header id="navbar">
+            <nav>
+                <a id="site-title" href="/">FITNESS</a>
+            </nav>
+            <nav>
+                {% if current_user.is_authenticated %}
+                <a class="glow-button" href="/user/{{current_user.username}}">
+                    {{current_user.username}}
+                </a>
+                <a class="glow-button" href="/auth/logout">Logout</a>
+                {% else %}
+                <a class="glow-button" href="/auth/login"> Login </a>
+                <a class="glow-button" href="/user/create"> Sign Up </a>
+                {% endif %}
+            </nav>
+        </header>
+
+        {% with messages = get_flashed_messages() %} {% if messages %}
+        <ul class="flashes">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %} {% endwith %}
+
+        <main id="main">{% block content %} {% endblock %}</main>
+    </body>
 </html>

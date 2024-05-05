@@ -1,6 +1,19 @@
+html, body {
+    height: 100%
+}
+
 body
 {
-    background-color: rgb(255,221,153);
-    font-family: Arial;
-    
+    background-color: #22222B;
+    font-family: "Inter", sans-serif;
+    color: #EEEEEE;
+
+    margin: 2rem 4rem;
+}
+
+#main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

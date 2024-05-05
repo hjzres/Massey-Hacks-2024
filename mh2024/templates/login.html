@@ -1,37 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-    <ul>
-        {% if current_user.is_authenticated %}
-            <p>Hi {{ current_user.username }}!</p>
-            <li><a href="/auth/logout">Logout</a></li>
-        {% else %}
-            <li><a href="/auth/login">Login</a></li>
-            <li><a href="/user/create">Register</a></li>
-        {% endif %}
-    </ul>
+<form id="input-form" action="/auth/login" method="post">
+  <label class="label" for="username">Username:</label>
+  <input class="input" type="text" name="username" id="username" />
 
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            <ul class=flashes>
-                {% for message in messages %}
-                    <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    {% endwith %}
+  <label class="label" for="password">Password:</label>
+  <input class="input" type="password" name="password" id="password" />
 
-    <form action="/auth/login" method="post">
-        <div id="input_div">
-            <label class="label" for="username">Username:</label><br>
-            <input class="input" type="text" name="username" id="username"><br>
+  <div>
+    <label class="label" for="remember">Remember Me:</label>
+    <input type="checkbox" name="remember" id="remember" />
+  </div>
 
-            <label class="label" for="password">Password:</label><br>
-            <input class="input" type="password" name="password" id="password"><br>
-
-            <label class="label" for="remember">Remember Me:</label>
-            <input type="checkbox" name="remember" id="remember"><br>
-
-            <input class="input buttons" type="submit" value="Login">
-        </div>
-    </form>
+  <input class="input glow-button" type="submit" value="Login" />
+</form>
 {% endblock %}

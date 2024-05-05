@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Freeman&display=swap");
+
+#navbar {
+    width: 100%;
+    height: 4.5rem;
+    box-sizing: border-box;
+    background-color: #555566;
+    box-shadow: 0 2px 8px #d94, 0 -2px 0 #eee inset;
+    transform: translateY(-0.1rem);
+    border-radius: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#site-title {
+    font-size: 2.5rem;
+    font-family: "Raleway", sans-serif;
+
+    transition: text-shadow 0.15s;
+}
+
+#site-title:hover {
+    text-shadow: 0 0 4px #eee;
+}
+
+#navbar .glow-button {
+    margin-left: 1rem;
+}
