@@ -7,8 +7,28 @@
     <link rel="stylesheet" href="/static/styles/base.css">
     <link rel="stylesheet" href="/static/styles/homeinfo.css">
     <link rel="stylesheet" href="/static/styles/homebar.css">
+    <link rel="stylesheet" href="/static/styles/useractivity.css">
 </head>
 <body>
+    <div id="homebar">
+        <div class="homebar_div" id="sidebar_div">
+            <button id="sidebar">Sidebar</button>
+        </div>
+    
+        <div class="homebar_div" id="title_div">
+            <h4 id="site_title">Fitness Website</h4>
+            <p id="site_slogan">your fitness planner.</p>
+        </div>
+    
+        <div class="homebar_div" id="login_buttons_div">
+            <a href="/auth/login">
+                <button class="login_buttons buttons">Login</button>
+            </a>
+            <a href="/user/create">
+                <button class="login_buttons buttons">Sign Up</button>
+            </a>
+        </div>
+    </div>
     {% block content %}
     {% endblock %}
 </body>

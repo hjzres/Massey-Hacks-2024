@@ -11,6 +11,7 @@
     height: var(--homebar_height);
     background-color: rgb(255,166,77);
     padding: 0;
+    border-radius: 10px;
 }
 
 #sidebar_div
@@ -57,9 +58,13 @@
 
 .login_buttons
 {
+    float: right;
+}
+
+.buttons
+{
     width: 30%;
     height: 50px;
-    float: right;
     margin: 0;
     background-color: rgb(255,212,128);
     border-color: rgb(255,179,25);
@@ -103,18 +108,6 @@
     display: block;
     margin: auto;
     float: left;
-}
-
-
-
-#sidebar button:hover
-{
-    
-}
-
-#sidebar button:active
-{
-    
 }
 
 .login_buttons:focus

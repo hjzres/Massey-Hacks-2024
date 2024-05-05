@@ -21,15 +21,17 @@
     {% endwith %}
 
     <form action="/auth/login" method="post">
-        <label for="username">Username:</label><br>
-        <input type="text" name="username" id="username"><br>
+        <div id="input_div">
+            <label class="label" for="username">Username:</label><br>
+            <input class="input" type="text" name="username" id="username"><br>
 
-        <label for="password">Password:</label><br>
-        <input type="password" name="password" id="password"><br>
+            <label class="label" for="password">Password:</label><br>
+            <input class="input" type="password" name="password" id="password"><br>
 
-        <label for="remember">Remember Me:</label>
-        <input type="checkbox" name="remember" id="remember"><br>
+            <label class="label" for="remember">Remember Me:</label>
+            <input type="checkbox" name="remember" id="remember"><br>
 
-        <input type="submit" value="Login">
+            <input class="input buttons" type="submit" value="Login">
+        </div>
     </form>
 {% endblock %}

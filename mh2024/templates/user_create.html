@@ -21,12 +21,16 @@
     {% endwith %}
 
     <form action="/user/create" method="post">
-        <label for="username">Username:</label><br>
-        <input type="text" name="username" id="username"><br>
+        <div id="input_div">
+            <label class="label" for="username">Username:</label><br>
+            <input class="input" type="text" name="username" id="username"><br>
 
-        <label for="password">Password:</label><br>
-        <input type="password" name="password" id="password"><br>
+            <label class="label" for="password">Password:</label><br>
+            <input class="input" type="password" name="password" id="password"><br>
 
-        <input type="submit" value="Register">
+            <input class="buttons input" type="submit" value="Register">
+        </div>
     </form>
+
+    <img class="background_image" src="/static/images/build_guy.png" alt="Buff black dude">
 {% endblock %}
