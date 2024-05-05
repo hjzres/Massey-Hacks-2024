@@ -4,6 +4,13 @@ from flask import Flask
 
 from .auth import login_manager
 
+import pathlib
+from . import data
+
+data_folder = pathlib.Path("./data/")
+data_folder.mkdir(exist_ok=True, parents=True)
+if not (data_folder / "cache.json").is_file():
+    data.post_file({})
 
 def create_app():
     app = Flask(__name__)
