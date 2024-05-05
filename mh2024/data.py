@@ -13,6 +13,11 @@ def add_user(user:str):
     }
     post_file(cache)
 
+def reset_day(user:str, day:str):
+    cache:dict = load_file()
+    cache[user][day] = {}
+    post_file(cache)
+
 def add_workout(user:str, day:str, workout:str, sets:list):
     cache:dict = load_file()
     if not user in cache: return

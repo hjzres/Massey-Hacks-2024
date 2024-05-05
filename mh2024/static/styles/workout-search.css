@@ -1,0 +1,10 @@
+.name {
+    width: 100%;
+    height: 40px;
+}
+
+.search{
+    display:flex;
+    float:right;
+    transform:translateY(30%);
+}
