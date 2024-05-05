@@ -6,7 +6,7 @@ authors = ["Andrei <142443853+hjzres@users.noreply.github.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.11"
 flask = "^3.0.3"
 passlib = { extras = ["argon2"], version = "^1.7.4" }
 flask-login = "^0.6.3"

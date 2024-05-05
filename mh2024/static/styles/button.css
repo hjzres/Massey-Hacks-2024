@@ -1,0 +1,26 @@
+.glow-button {
+    padding: 0.5rem 2rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+
+    color: #eee;
+    background-color: #222;
+    box-shadow: 0 0.2rem 0.4rem rgba(45, 35, 66, 0.4);
+
+    font-size: 1.2rem;
+    font-family: "Raleway", sans-serif;
+
+    transition: box-shadow 0.15s, transform 0.15s;
+
+    display: inline-block;
+}
+
+.glow-button:hover {
+    box-shadow: 0 4px 8px #d94, 0 -3px 0 #eee inset;
+    transform: translateY(-0.1rem);
+}
+
+.glow-button:active {
+    box-shadow: 0 4px 8px #f54, 0 -3px 0 #eee inset;
+    transform: translateY(0.1px);
+}
