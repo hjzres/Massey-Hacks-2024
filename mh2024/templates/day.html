@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/styles/day.css">
+    <link rel="stylesheet" href="/static/styles/base.css">
     <title>{{ day.title() }}</title>
 </head>
 <body>
@@ -27,9 +28,9 @@
         <form method="post">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <p>What workout would you like to add?</p>
+                <p style="color:black;">What workout would you like to add?</p>
                 <input type="text" name="workout" id="workout" required>
-                <p>How many in each set?</p>
+                <p style="color:black;">How many in each set?</p>
                 <input type="text" name="set1" id="set1" class="set" required>
                 <input type="text" name="set2" id="set2" class="set" required>
                 <input type="text" name="set3" id="set3" class="set" required>
