@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+
+body
+{
+    margin: 0px;
+    background-color: rgb(255,238,204);
+}
+
+h1{
+    font-family: "Freeman", Arial, Helvetica, sans-serif;
+    font-size: 400%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workouts{
+    background-color: blue;
+    margin:10px;
+    height:300px;
+}

@@ -4,6 +4,12 @@
     
 }
 
+body
+{
+    margin: 0px;
+    background-color: rgb(255,238,204);
+}
+
 .workout-title{
     font-family: "Freeman", Arial, Helvetica, sans-serif;
     display:flex;
@@ -24,7 +30,7 @@ button:hover{
     left: 0;
     transform: translateY(-75%);
     margin: 0 20px;
-}
+}   
 
 
 .search{
