@@ -1,6 +1,6 @@
 import re
 
-from flask import Blueprint, flash, redirect, render_template, request
+from flask import Blueprint, abort, flash, redirect, render_template, request
 from flask_login import login_user
 
 from mh2024 import crud
@@ -34,3 +34,13 @@ def user_create():
         flash("Logged in!")
 
     return render_template("user_create.html")
+
+
+@bp.route("/<username>", methods=["GET", "POST"])
+def user_profile(username):
+    user = crud.get_user_by_username(username)
+
+    if user is None:
+        abort(404)
+
+    return render_template("user_profile.html", user=user)
