@@ -2,7 +2,7 @@ from flask_login import LoginManager
 
 from mh2024 import crud
 
-from .auth import pw_ctx
+from .auth import hash_password, pw_ctx
 
 login_manager = LoginManager()
 

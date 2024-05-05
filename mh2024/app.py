@@ -1,6 +1,6 @@
 from os import environ
 
-from flask import Flask, render_template
+from flask import Flask, render_template, g
 
 from .auth import login_manager
 
@@ -27,6 +27,5 @@ def create_app():
 
         app.register_blueprint(auth.bp)
         app.register_blueprint(user.bp)
-        app.register_blueprint(plan.bp)
 
     return app

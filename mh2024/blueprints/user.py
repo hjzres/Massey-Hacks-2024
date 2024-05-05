@@ -14,6 +14,7 @@ username_regex = re.compile(r"^[a-zA-Z0-9_]+$")
 def user_create():
     if request.method == "POST":
         username = request.form["username"]
+        email = request.form["email"]
         password = request.form["password"]
 
         if username_regex.fullmatch(username) is None:
@@ -28,7 +29,7 @@ def user_create():
             flash("Username already in use!")
             return redirect("/user/create")
 
-        user = crud.create_user(username, password)
+        user = crud.create_user(username, password, email)
 
         login_user(user)
         flash("Logged in!")
