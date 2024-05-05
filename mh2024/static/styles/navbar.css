@@ -4,7 +4,6 @@
     box-sizing: border-box;
     background-color: #555566;
     box-shadow: 0 2px 8px #d94, 0 -2px 0 #eee inset;
-    transform: translateY(-0.1rem);
     border-radius: 1rem;
 
     display: flex;
@@ -15,7 +14,25 @@
     margin-bottom: 2rem;
 }
 
+.flashes {
+    width: 100%;
+}
 
+.flash-bar {
+    width: 100%;
+    height: 2rem;
+    box-sizing: border-box;
+    background-color: #555566;
+    border-radius: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 1rem;
+
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+}
 
 #site-title {
     font-size: 2.5rem;
