@@ -45,4 +45,18 @@ input[type=submit] {
 {
     width: 15rem;
     height: auto;
+
+    animation: MoveUpDown 5s ease-in-out infinite;
+
+
 }
+
+@keyframes MoveUpDown {
+    
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
