@@ -24,18 +24,20 @@
     <div id="myModal" class="modal">
 
         <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <p>What workout would you like to add?</p>
-          <input type="text" name="workout" id="workout">
-          <p>How many in each set?</p>
-          <input type="text" name="set1" id="set1" class="set">
-          <input type="text" name="set2" id="set2" class="set">
-          <input type="text" name="set3" id="set3" class="set">
-        </div>
-      
+        <form method="post">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>What workout would you like to add?</p>
+                <input type="text" name="workout" id="workout" required>
+                <p>How many in each set?</p>
+                <input type="text" name="set1" id="set1" class="set" required>
+                <input type="text" name="set2" id="set2" class="set" required>
+                <input type="text" name="set3" id="set3" class="set" required>
+                <button class="add">Add</button>
+            </div>
+        </form>
       </div>
 
-      <script src="/static/day.js"></script>pt
+      <script src="/static/day.js"></script>
 </body>
 </html>

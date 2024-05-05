@@ -66,7 +66,13 @@ h1{
 }
 
 .set{
-    display:block;
+    display:flex;
     margin:3px;
     width:3%;
+}
+
+.add{
+    display:flex;
+    float:right;
+    transform: translateY(-50%);
 }
