@@ -12,9 +12,10 @@ def create_app():
     login_manager.init_app(app)
 
     with app.app_context():
-        from .blueprints import auth, user
+        from .blueprints import auth, user, plan
 
         app.register_blueprint(auth.bp)
         app.register_blueprint(user.bp)
+        app.register_blueprint(plan.bp)
 
     return app
