@@ -4,7 +4,5 @@ searchButton = document.getElementById("search");
 
     searchButton.addEventListener("click", () => {
     var name = textInput.value;
-    if (name) {
-        form.action = "/plan/workout/search/" + name;
-    }
+    form.action = "/plan/workout/search/" + name;
 });
